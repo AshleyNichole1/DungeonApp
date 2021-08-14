@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Dungeon_Library
 {
-    public class weapon
+    public class Weapon
     {
         private int _minDamage;
         public string Name { get; set; }
         public int BonusHitChance { get; set; }
-       
+
         public int MaxDamage { get; set; }
         public int MinDamage
         {
@@ -23,12 +23,12 @@ namespace Dungeon_Library
 
         }//end MinDamage
 
-        public weapon(string name, int bonusHitChance, int minDamage, int maxDamage)
+        public Weapon(string name, int bonusHitChance, int minDamage, int maxDamage)
         {
             MaxDamage = maxDamage;
             Name = name;
             BonusHitChance = bonusHitChance;
-           
+
             MinDamage = minDamage;
         }//end FQCTOR
 
@@ -37,5 +37,7 @@ namespace Dungeon_Library
             return string.Format($"{Name}\nDamage: {MinDamage} to {MaxDamage}\n" +
                 $"Hit Modifier: {BonusHitChance}\n");
         }
+
+        public Weapon() { }
     }
 }

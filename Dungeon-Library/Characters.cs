@@ -16,6 +16,7 @@ namespace Dungeon_Library
         public int Attack { get; set; }
         public int Block { get; set; }
         public int Maxlife { get; set; }
+        
         public int Life
         {
             get { return _life; }
@@ -49,6 +50,9 @@ namespace Dungeon_Library
 
         public abstract int CalcDamage();
         //Because we don't define the default functionality we use a method stub with no body.
+
+  
+
 
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dungeon_Library
 {
-    public class badGuys : Characters
+    public class BadGuys : Characters
     {
 
         private int _minDamage;
@@ -22,19 +22,25 @@ namespace Dungeon_Library
             }//end set }
         }
 
-        public badGuys(string name, int hitChance, int block, int life, int maxLife, int maxDamage, string description, int minDamage)
-            : base(name, hitChance, block, life, maxLife)
+        public BadGuys(string name, int attack, int block, int life, int maxLife, int maxDamage, string description, int minDamage)
+            : base(name, attack, block, life, maxLife)
 
         {
+            Maxlife = maxLife; 
             MaxDamage = maxDamage;
             Description = description;
             MinDamage = minDamage;
+            Name = name;
+            Attack = attack;
+            Block = block;
+            Life = life;
+
         }
         public override string ToString()
         {
 
-            return string.Format($"{Name}\n{Description}\n" +
-              $"{(Life == Maxlife ? "You've done damage!" : Life <= Maxlife * .25 ? "The battle is almost won!" : "You've done damage")}");
+            return string.Format(Name + Description + Life + Maxlife 
+                 + Attack + Block);
         }
 
         public override int CalcDamage()

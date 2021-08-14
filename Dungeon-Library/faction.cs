@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Dungeon_Library
 {
-    public enum faction
+    public enum Faction
     {
         Abnegation,
         Erudite,
         Dauntless,
         Candor, 
         Amity,
-        Divergent
+        Yourself
     }
 }
