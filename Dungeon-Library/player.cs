@@ -59,9 +59,8 @@ namespace Dungeon_Library
 
          public override string ToString()
          {
-             return string.Format($"{Name}\nFaction: {Playerfaction}\nLife: {Life} of {Maxlife}\n" +
-                 $"Equipped Weapon:\n{EquippedWeapon}\nAttack: {Attack}%\n" +
-                 $"Block Chance: {Block}%");
+             return string.Format("Name: " + Name + "\nFaction: " +Playerfaction + "\nLife: " + Life + "\nMaxLife: " +Maxlife  +
+                 "\nWeapon: " + EquippedWeapon + "Attack: " + Attack + "\nBlock: " + Block +"\n" );
          }
 
          public override int CalcDamage()

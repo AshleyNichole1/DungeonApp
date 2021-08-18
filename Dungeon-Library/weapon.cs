@@ -19,9 +19,9 @@ namespace Dungeon_Library
             set
             {
                 _minDamage = value > 0 && value <= MaxDamage ? value : 1;
-            }//end set
+            }
 
-        }//end MinDamage
+        }
 
         public Weapon(string name, int bonusHitChance, int minDamage, int maxDamage)
         {
@@ -30,7 +30,7 @@ namespace Dungeon_Library
             BonusHitChance = bonusHitChance;
 
             MinDamage = minDamage;
-        }//end FQCTOR
+        }
 
         public override string ToString()
         {

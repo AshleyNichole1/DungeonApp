@@ -26,7 +26,7 @@ namespace Dungeon_Library
             : base(name, attack, block, life, maxLife)
 
         {
-            Maxlife = maxLife; 
+            Maxlife = maxLife;
             MaxDamage = maxDamage;
             Description = description;
             MinDamage = minDamage;
@@ -39,13 +39,16 @@ namespace Dungeon_Library
         public override string ToString()
         {
 
-            return string.Format(Name + Description + Life + Maxlife 
-                 + Attack + Block);
+            return string.Format("Name: " + Name + "\nDescriprion: " + Description + "\nLife: " + Life + "\nMaxLife: " + Maxlife
+                 + "\nAttack: " + Attack + "\nBlock: " + Block + "\n");
+
         }
 
         public override int CalcDamage()
         {
             return new Random().Next(MinDamage, MaxDamage + 1);
         }
+
+
     }
 }

@@ -23,10 +23,10 @@ namespace Dungeon_Library
             set
             {
                 _life = value > Maxlife ? Maxlife : value;
-            }//end set
-        }//end life
+            }
+        }
 
-        //ctor not neccessary but eliminates duplication of code in other classes
+        
 
         public Characters(string name, int attack, int block, int life, int maxlife)
         {
@@ -49,8 +49,8 @@ namespace Dungeon_Library
 
 
         public abstract int CalcDamage();
-        //Because we don't define the default functionality we use a method stub with no body.
-
+       
+        
   
 
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dungeon_Library
 {
-    public class War
+    public class War 
     {
         public static void Attack(Characters attacker, Characters defender)
         {
@@ -29,6 +29,7 @@ namespace Dungeon_Library
             }
 
         }
+
         public static void Battle(Player divergent, BadGuys guards)
         {
             Attack(divergent, guards);
@@ -36,7 +37,26 @@ namespace Dungeon_Library
             {
                 Attack(guards, divergent);
             }
+        
+            if (guards.Life == guards.Maxlife)
+            {
+                Console.WriteLine("It is uninjured");
+            }
+
+            if (guards.Life < guards.Maxlife * .25 && guards.Life > 0)
+            {
+                Console.WriteLine("It is near death");
+            }
+
+      
+
+
         }
+
+
+
+
+
     }
 }
-    //$"{(Life == Maxlife ? "You've done damage!" : Life <= Maxlife * .25 ? "The battle is almost won!" : "You've done damage")}");
+   

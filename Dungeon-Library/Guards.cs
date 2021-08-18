@@ -10,11 +10,13 @@ namespace Dungeon_Library
     {
        
 
-        public Guards(string name, int hitChance, int block, int life, int maxLife, int maxDamage, string description, int minDamage)
-            : base(name, hitChance, block, life, maxLife, maxDamage, description, minDamage)
+        public Guards(string name, int attack, int block, int life, int maxLife, int maxDamage, string description, int minDamage)
+            : base(name, attack, block, life, maxLife, maxDamage, description, minDamage)
         {
        
+            
+        }
 
-        }//end FQCTOR
+
     }
 }
