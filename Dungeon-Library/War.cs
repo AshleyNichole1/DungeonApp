@@ -40,12 +40,12 @@ namespace Dungeon_Library
         
             if (guards.Life == guards.Maxlife)
             {
-                Console.WriteLine("It is uninjured");
+                Console.WriteLine("They are uninjured");
             }
 
             if (guards.Life < guards.Maxlife * .25 && guards.Life > 0)
             {
-                Console.WriteLine("It is near death");
+                Console.WriteLine("They are near death");
             }
 
       

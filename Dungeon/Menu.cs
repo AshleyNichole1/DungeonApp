@@ -20,11 +20,11 @@ namespace Dungeon
             Console.Title = "Divergent";
             Console.WriteLine("The world you knew is now gone. It has been destroyed. The only thing left is a town surrounded by a large cement wall created by our founders to keep everyone safe. We have been divided into five factions.");
             Console.WriteLine("");
-            System.Threading.Thread.Sleep(5000);
+            //System.Threading.Thread.Sleep(5000);
             Console.WriteLine(Environment.NewLine + "The factions are based on personality, virtue, and strength. Each group possesses certain qualities they mutually value and excel at. The factions are called Abnegation (selfless), Erudite (intellectual), Dauntless (brave), Candor (honest) and Amity (peaceful).");
-            System.Threading.Thread.Sleep(2500);
+            //System.Threading.Thread.Sleep(2500);
             Console.WriteLine(Environment.NewLine + "There is an evil dictator determind to take over all five factions. You must help us defeat her.");
-            System.Threading.Thread.Sleep(2000);
+            //System.Threading.Thread.Sleep(2000);
 
             Console.WriteLine(Environment.NewLine + "What's your name?");
             Divergent = Console.ReadLine();
@@ -35,8 +35,8 @@ namespace Dungeon
             do
             {
 
-                Console.WriteLine(Divergent + " you are Divergent meaning you possess qualities of all factions but you will need back up. Choose a faction to fight with." + Environment.NewLine);
-                System.Threading.Thread.Sleep(2500);
+                Console.WriteLine(Divergent + " you are Divergent meaning you possess qualities of all factions but you will need back up. Choose a faction to fight beside." + Environment.NewLine);
+                //System.Threading.Thread.Sleep(2500);
                 
                 Console.WriteLine(
                     "1)Abnegation- They possess the ability to fight and to protect themselves but have never experienced battle\n" +
@@ -105,7 +105,7 @@ namespace Dungeon
           
             Console.Clear();
             Console.WriteLine($"Thank you, {Divergent} you are now fighting by {herofaction}\n");
-            System.Threading.Thread.Sleep(1000);
+            //System.Threading.Thread.Sleep(1000);
 
             Weapon myWeapon = new Weapon();
 
@@ -113,7 +113,7 @@ namespace Dungeon
             do
             {
                 Console.WriteLine("To get to the evil dictator we must get past all of her guards. You'll need a weapon:");
-                System.Threading.Thread.Sleep(2500);
+                //System.Threading.Thread.Sleep(2500);
 
                 Console.WriteLine(
                     "1)The rail gun\n" +
@@ -170,7 +170,11 @@ namespace Dungeon
 
            
             Console.Clear();
-            Console.WriteLine(Divergent + "fighting with " + myWeapon + Environment.NewLine + "Fighting by " + herofaction + Environment.NewLine);
+            Console.WriteLine(Divergent + " fighting with " + myWeapon + Environment.NewLine + "Fighting by " + herofaction);
+            System.Threading.Thread.Sleep(2500);
+            Console.WriteLine("There is a large building, in the building are guards protecting multiple rooms but we know the Evil Dictator is hiding in one. Let's go in and find her.." + Environment.NewLine);
+
+            System.Threading.Thread.Sleep(2500);
             
             Player divergent = new Player(Divergent, 70, 10, 50, 50, herofaction, myWeapon);
 
@@ -185,7 +189,7 @@ namespace Dungeon
 
                 Guards trainedSoldier = new Guards("One of the evil dictators trained soldiers", 30, 2, 10, 10, 1, "These soldiers are mindless followers who do not realize the evil dictators true intentions.", 5);
 
-                Guards evildictator = new Guards("evil dictator", 30, 2, 10, 10, 1, "the evil dictator.", 5);
+                Guards evildictator = new Guards("The Evil Dictator", 30, 2, 10, 10, 1, "The Dictator has lost her mind, she will stop at nothing for ultimate power and control.", 5);
 
 
                 BadGuys[] badGuys =
@@ -238,9 +242,9 @@ namespace Dungeon
 
 
                                 reload = true;
-                                System.Threading.Thread.Sleep(4000);
-                                Console.WriteLine("The room has been cleared, there's no time to waste we need to move.");
                                 //System.Threading.Thread.Sleep(4000);
+                                Console.WriteLine("The room has been cleared, there's no time to waste we need to move.");
+                                System.Threading.Thread.Sleep(4000);
                                 Console.Clear();
                                 killCount++;
 
@@ -248,6 +252,8 @@ namespace Dungeon
 
                             }
                             break;
+
+                  
 
                         case ConsoleKey.R:
 
@@ -281,7 +287,7 @@ namespace Dungeon
 
                     if (badguy.Life <= 0 && killCount >= 3)
                     {
-                        Console.WriteLine("you won");
+                        Console.WriteLine("You've defeated the Evil Dictator!");                        
                         exit = true;
                     }                    
 
