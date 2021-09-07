@@ -20,11 +20,16 @@ namespace Dungeon
             Console.Title = "Divergent";
             Console.WriteLine("The world you knew is now gone. It has been destroyed. The only thing left is a town surrounded by a large cement wall created by our founders to keep everyone safe. We have been divided into five factions.");
             Console.WriteLine("");
-            //System.Threading.Thread.Sleep(5000);
-            Console.WriteLine(Environment.NewLine + "The factions are based on personality, virtue, and strength. Each group possesses certain qualities they mutually value and excel at. The factions are called Abnegation (selfless), Erudite (intellectual), Dauntless (brave), Candor (honest) and Amity (peaceful).");
-            //System.Threading.Thread.Sleep(2500);
+        
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write(Explosion.GetExplosion());
+
+            Console.ResetColor();
+            System.Threading.Thread.Sleep(5000);
+            Console.WriteLine("The factions are based on personality, virtue, and strength. Each group possesses certain qualities they mutually value and excel at. The factions are called Abnegation (selfless), Erudite (intellectual), Dauntless (brave), Candor (honest) and Amity (peaceful).");
+            System.Threading.Thread.Sleep(2500);
             Console.WriteLine(Environment.NewLine + "There is an evil dictator determind to take over all five factions. You must help us defeat her.");
-            //System.Threading.Thread.Sleep(2000);
+            System.Threading.Thread.Sleep(2000);
 
             Console.WriteLine(Environment.NewLine + "What's your name?");
             Divergent = Console.ReadLine();
@@ -36,8 +41,8 @@ namespace Dungeon
             {
 
                 Console.WriteLine(Divergent + " you are Divergent meaning you possess qualities of all factions but you will need back up. Choose a faction to fight beside." + Environment.NewLine);
-                //System.Threading.Thread.Sleep(2500);
-                
+                System.Threading.Thread.Sleep(2500);
+
                 Console.WriteLine(
                     "1)Abnegation- They possess the ability to fight and to protect themselves but have never experienced battle\n" +
                     "2)Erudite- They are cunning and brave but not the strongest\n" +
@@ -45,7 +50,10 @@ namespace Dungeon
                     "4)Candor- Their honesty, though noble, does not get them far in the battlefield\n" +
                     "5)Amity- They have learned to protect and fight for themselves but usually choose peace over battle\n" +
                     "6)Divergent- On your own.");
-                
+
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write(Soldiers.GetSoldiers());
+                Console.ResetColor();
 
 
                 ConsoleKey factionChoice = Console.ReadKey().Key;
@@ -105,7 +113,7 @@ namespace Dungeon
           
             Console.Clear();
             Console.WriteLine($"Thank you, {Divergent} you are now fighting by {herofaction}\n");
-            //System.Threading.Thread.Sleep(1000);
+            System.Threading.Thread.Sleep(1000);
 
             Weapon myWeapon = new Weapon();
 
@@ -113,7 +121,7 @@ namespace Dungeon
             do
             {
                 Console.WriteLine("To get to the evil dictator we must get past all of her guards. You'll need a weapon:");
-                //System.Threading.Thread.Sleep(2500);
+                System.Threading.Thread.Sleep(2500);
 
                 Console.WriteLine(
                     "1)The rail gun\n" +
@@ -121,6 +129,9 @@ namespace Dungeon
                     "3)Your Bare Hands\n" +
                     "4)A Large Sword\n");
 
+                Console.ForegroundColor = ConsoleColor.DarkBlue;
+                Console.Write(Weapons.GetWeapons());
+                Console.ResetColor();
 
                 ConsoleKey weaponChoice = Console.ReadKey().Key;
 
@@ -185,11 +196,11 @@ namespace Dungeon
                
              
                 Console.WriteLine(Room.ChooseRoom());
-                BadGuys mindControlled = new BadGuys("One of the Dauntless soldiers whose mind has been taken over", 30, 2, 10, 10, 1, "This soldier was once with the Dauntless faction. The evil Dictator has taken over their mind", 5);
+                BadGuys mindControlled = new BadGuys("One of the Dauntless soldiers whose mind has been taken over", 75, 20, 30, 40, 9, "This soldier was once with the Dauntless faction. The evil Dictator has taken over their mind", 9);
 
-                Guards trainedSoldier = new Guards("One of the evil dictators trained soldiers", 30, 2, 10, 10, 1, "These soldiers are mindless followers who do not realize the evil dictators true intentions.", 5);
+                Guards trainedSoldier = new Guards("One of the evil dictators trained soldiers", 75, 15, 30, 25, 9, "These soldiers are mindless followers who do not realize the evil dictators true intentions.", 7);
 
-                Guards evildictator = new Guards("The Evil Dictator", 30, 2, 10, 10, 1, "The Dictator has lost her mind, she will stop at nothing for ultimate power and control.", 5);
+                Guards evildictator = new Guards("The Evil Dictator", 75, 12, 25, 45, 11, "The Dictator has lost her mind, she will stop at nothing for ultimate power and control.", 13);
 
 
                 BadGuys[] badGuys =
@@ -242,8 +253,8 @@ namespace Dungeon
 
 
                                 reload = true;
-                                //System.Threading.Thread.Sleep(4000);
-                                Console.WriteLine("The room has been cleared, there's no time to waste we need to move.");
+                                System.Threading.Thread.Sleep(2000);
+                                Console.WriteLine("The room has been cleared.");
                                 System.Threading.Thread.Sleep(4000);
                                 Console.Clear();
                                 killCount++;

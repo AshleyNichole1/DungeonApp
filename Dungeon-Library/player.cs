@@ -21,33 +21,34 @@ namespace Dungeon_Library
              {
                  case Faction.Abnegation:
                      Maxlife += 10;
-                     Life += 10;
-                     Attack -= 5;
+                     Life += 8;
+                     Attack += 5;
+                     Block += 2;
                    
                      break;
                  case Faction.Amity:
-                     Attack += 5;
+                     Attack += 2;
                      Block += 5;
-                     Maxlife += 10;
-                     Life -= 10;
+                     Maxlife += 15;
+                     Life += 10;
                   
                      break;
                  case Faction.Candor:
                      Block += 5;
-                     Maxlife -= 5;
-                     Life -= 5;
+                     Maxlife += 5;
+                     Life += 5;
                   
                      break;
                  case Faction.Dauntless:
                      Attack += 10;
-                     Block -= 5;
-                     Maxlife -= 5;
+                     Block += 5;
+                     Maxlife += 5;
                      Life += 5;
                   
                      break;
                  case Faction.Erudite:
-                     Maxlife -= 10;
-                     Life -= 10;
+                     Maxlife += 10;
+                     Life += 10;
                      Attack += 10;
               
                      break;                

@@ -46,7 +46,10 @@ namespace Dungeon_Library
 
         public override int CalcDamage()
         {
-            return new Random().Next(MinDamage, MaxDamage + 1);
+            Random rand = new Random();
+
+            int damage = rand.Next(MinDamage, MaxDamage + 1);
+            return damage;
         }
 
 

@@ -12,7 +12,7 @@ namespace Dungeon_Library
         public static string ChooseRoom()
         {
             string[] rooms =
-           { "You enter the random red room and see ","You enter the random blue room and see","You enter the random purple room and see", "You enter the random orange room and see"};
+           { "You enter a utility room and see","You enter the computer lab and see","You enter the control room and see", "You enter the basement and see"};
 
             return rooms[new Random().Next(rooms.Length)];
         } 
