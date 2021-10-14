@@ -196,11 +196,11 @@ namespace Dungeon
                
              
                 Console.WriteLine(Room.ChooseRoom());
-                BadGuys mindControlled = new BadGuys("One of the Dauntless soldiers whose mind has been taken over", 75, 20, 30, 40, 9, "This soldier was once with the Dauntless faction. The evil Dictator has taken over their mind", 9);
+                BadGuys mindControlled = new BadGuys("One of the Dauntless soldiers whose mind has been taken over", 55, 20, 30, 40, 8, "This soldier was once with the Dauntless faction. The evil Dictator has taken over their mind", 2);
 
-                Guards trainedSoldier = new Guards("One of the evil dictators trained soldiers", 75, 15, 30, 25, 9, "These soldiers are mindless followers who do not realize the evil dictators true intentions.", 7);
+                Guards trainedSoldier = new Guards("One of the evil dictators trained soldiers", 55, 15, 30, 25, 8, "These soldiers are mindless followers who do not realize the evil dictators true intentions.", 2);
 
-                Guards evildictator = new Guards("The Evil Dictator", 75, 12, 25, 45, 11, "The Dictator has lost her mind, she will stop at nothing for ultimate power and control.", 13);
+                Guards evildictator = new Guards("The Evil Dictator", 65, 12, 25, 45, 9, "The Dictator has lost her mind, she will stop at nothing for ultimate power and control.", 2);
 
 
                 BadGuys[] badGuys =
@@ -255,7 +255,7 @@ namespace Dungeon
                                 reload = true;
                                 System.Threading.Thread.Sleep(2000);
                                 Console.WriteLine("The room has been cleared.");
-                                System.Threading.Thread.Sleep(4000);
+                                System.Threading.Thread.Sleep(2000);
                                 Console.Clear();
                                 killCount++;
 
@@ -272,7 +272,7 @@ namespace Dungeon
                             System.Threading.Thread.Sleep(1700);
                             Console.WriteLine("You no longer have a home or a reason to fight. You will spend the rest " +
                                 "of your days scavanging for food and shelter.");
-                            System.Threading.Thread.Sleep(1700);
+                            Console.WriteLine();
 
                             exit = true;
                             break;
@@ -298,7 +298,8 @@ namespace Dungeon
 
                     if (badguy.Life <= 0 && killCount >= 3)
                     {
-                        Console.WriteLine("You've defeated the Evil Dictator!");                        
+                        Console.WriteLine("You've defeated the Evil Dictator!");
+                        Console.WriteLine();
                         exit = true;
                     }                    
 
@@ -306,6 +307,7 @@ namespace Dungeon
                     if (divergent.Life < 1)
                     {
                         Console.WriteLine($"You have been killed by {badguy.Name}!");
+                        Console.WriteLine();
                         exit = true;
                     }
                                
@@ -315,11 +317,12 @@ namespace Dungeon
 
                 } while (!reload && !exit);
 
+
             } while (!exit);
+
+            Console.WriteLine();
             Console.WriteLine("FIN");
-
-
-
+            
 
 
         }

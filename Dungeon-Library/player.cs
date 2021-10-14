@@ -27,7 +27,7 @@ namespace Dungeon_Library
                    
                      break;
                  case Faction.Amity:
-                     Attack += 2;
+                     Attack += 7;
                      Block += 5;
                      Maxlife += 15;
                      Life += 10;
@@ -37,7 +37,9 @@ namespace Dungeon_Library
                      Block += 5;
                      Maxlife += 5;
                      Life += 5;
-                  
+                    Attack += 10;
+
+
                      break;
                  case Faction.Dauntless:
                      Attack += 10;
